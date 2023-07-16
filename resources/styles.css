@@ -17,7 +17,7 @@
     --btn2ActiveShadow: rgba(158,227,255,0.3);
 }
 :root[colorTheme='dark'] {
-    --bgImage: url('./img/bg.jpg');
+    --bgImage: #292A2F url('./img/bg.jpg');
     --textColor: #fff;
     --linkColor: #8D9194;
     --linkHoverColor: #9ee3ff;
