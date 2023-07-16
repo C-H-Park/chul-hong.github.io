@@ -31,8 +31,10 @@
     --btn2Color: #26272C;
     --btn2BG: rgba(240,245,247,0.5);
     --btn2Shadow: rgba(0,0,0,0.3);
+    --btn2HoverColor: #506b7d;
     --btn2HoverBG: rgba(240,245,247,0.8);
     --btn2HoverShadow: rgba(240,245,247,0.3);
+    --btn2ActiveColor: #fff;
     --btn2ActiveBG: rgba(158,227,255,0.8);
     --btn2ActiveShadow: rgba(158,227,255,0.3);
 }
@@ -93,7 +95,7 @@ hr {
 }
 a {
     color: var(--linkColor);
-    transition: color 0.3s;
+    transition: color 0.5s;
 }
 a:visited {
     color: var(--linkColor);
@@ -158,7 +160,7 @@ a:active {
     text-align: center;
     white-space: nowrap;
     font-weight: bold;
-    transition: background-color 0.3s, box-shadow 0.3s, color 0.3s, border 0.3s;
+    transition: background-color 0.5s, box-shadow 0.5s, color 0.5s, border 0.5s;
     display: flex;
     align-items: center;
 }
@@ -204,7 +206,7 @@ a:active {
     /* border-radius: 20px; */
     text-align: center;
     padding: 0px 10px;
-    transition: box-shadow 0.5s, background-color 0.5s;
+    transition: box-shadow 0.5s, background-color 0.5s, color 0.5s;
     display: inline-block;
     margin: 0 5px;
 }
@@ -212,11 +214,13 @@ a:active {
     .button2:hover {
         background-color: var(--btn2HoverBG);
         box-shadow: 0 0 5px 2px var(--btn2HoverShadow);
+        color: var(--btn2HoverColor);
     }
 }
 .button2:active {
     background-color: var(--btn2ActiveBG);
     box-shadow: 0 0 5px 2px var(--btn2ActiveShadow);
+    color: var(--btn2ActiveColor);
 }
 
 .FloatWrapper {
