@@ -91,11 +91,19 @@ hr {
     margin-block-start: 20px;
     margin-block-end: 20px;
 }
-
 a {
     color: var(--linkColor);
+    transition: color 0.3s;
 }
-a:hover, a:active {
+a:visited {
+    color: var(--linkColor);
+}
+@media (hover: hover) and (pointer: fine) {
+    a:hover {
+        color: var(--linkHoverColor);
+    }
+}
+a:active {
     color: var(--linkHoverColor);
 }
 
@@ -154,12 +162,14 @@ a:hover, a:active {
     display: flex;
     align-items: center;
 }
-.button1:enabled:hover {
-    color: var(--btnHoverColor);
-    border: 3px solid transparent;
-    background-color: var(--btnHoverBG);
-    box-shadow: 0 0 5px 2px var(--btnHoverShadow);
-    /* text-overflow: unset; */
+@media (hover: hover) and (pointer: fine) {
+    .button1:enabled:hover {
+        color: var(--btnHoverColor);
+        border: 3px solid transparent;
+        background-color: var(--btnHoverBG);
+        box-shadow: 0 0 5px 2px var(--btnHoverShadow);
+        /* text-overflow: unset; */
+    }
 }
 .button1:enabled:active {
     background-color: var(--btnActiveBG);
@@ -198,9 +208,11 @@ a:hover, a:active {
     display: inline-block;
     margin: 0 5px;
 }
-.button2:hover {
-    background-color: var(--btn2HoverBG);
-    box-shadow: 0 0 5px 2px var(--btn2HoverShadow);
+@media (hover: hover) and (pointer: fine) {
+    .button2:hover {
+        background-color: var(--btn2HoverBG);
+        box-shadow: 0 0 5px 2px var(--btn2HoverShadow);
+    }
 }
 .button2:active {
     background-color: var(--btn2ActiveBG);
